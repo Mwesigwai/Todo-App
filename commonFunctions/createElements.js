@@ -5,16 +5,16 @@ export function createElements() {
     let itemContainer = document.createElement('div');
     let checkBox = document.createElement('input');
     let itemName = document.createElement('span');
-    let editBtn = document.createElement('button');
-    let deleteBtn = document.createElement('button');
+    let editBtn = document.createElement('img');
+    let deleteBtn = document.createElement('img');
 
     itemContainer.classList.add('itemContainer');
     itemName.classList.add('item');
     checkBox.classList.add('checkBox');
     checkBox.type = 'checkBox';
 
-    editBtn.textContent = 'Edit';
-    deleteBtn.textContent = 'Delete';
+    editBtn.src = './images/edit.svg';
+    deleteBtn.src = './images/redDelete.svg';
     editBtn.classList.add('editButton');
     deleteBtn.classList.add('deleteButton');
 

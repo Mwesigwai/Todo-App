@@ -4,7 +4,7 @@ import { getTasks } from "../commonFunctions/getTasks.js";
 
 export function updatePagination() {
     const totalTasks = getTasks().length;
-    const tasksPerPage = 5;
+    const tasksPerPage = 3;
     const pageCount = Math.ceil((totalTasks / tasksPerPage));
     const pageNumbers = document.querySelector('.pageNumbers');
 

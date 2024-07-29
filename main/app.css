@@ -3,25 +3,30 @@
     margin: 0;
     padding: 0;
     font-family: "Patrick Hand";
+    font-family: sans-serif;
     font-weight: 400;
     font-style: normal;
-    /* outline: 2px solid red; */
+    border-radius: .5em;
 }
 
+body{
+    background-color: #f0f5f4;
+}
 
 .container{
-    width: 70%;
+    max-width: 700px;
     margin: auto;
     text-align: center;
 }
 
 h1{
-    margin-bottom: 1em;
+    margin-bottom: .5em;
 }
 
 header{
     font-weight: bold;
-    font-size: larger;
+    font-size: 1em;
+    padding-top: 2em;
 }
 
 .form{
@@ -34,6 +39,8 @@ header{
     padding: .3em;
     margin-top: .5em;
     margin-bottom: .5em;
+    background-color: #e8e7e7;
+    /* border: none; */
 }
 
 .form, .statistics{
@@ -49,8 +56,8 @@ header{
 }
 
 #submitBtn{
-    background-color: #000;
-    color: #fff;
+    background-color: #a6b1e1;
+    color: #f7f5f5;
     border: none;
 }
 
@@ -59,9 +66,9 @@ header{
     display: flex;
     justify-content:space-between;
     font-size: large;
-    background-color: #000;
-    color: #fff;
-    padding: 1em;
+    background-color: #a6b1e1;
+    color: #f9f3f3;
+    padding: .6em;
 }
 
 .statistics .root{
@@ -70,13 +77,15 @@ header{
 }
 
 .itemContainer{
-    display: grid;
-    grid-template-columns: auto auto;
+    display: flex;
     justify-content: space-between;
-    margin: 1em 0;
+    align-items: center;
+    margin: 1em .5em;
     text-align: left;
-    background-color: #fff;
-    padding: .2em;
+    padding: 1em;
+    background-color: #fbf7f7;
+    color: #000;
+    height: 5em;
 }
 
 .itemContainer .item, .checkBox{
@@ -86,15 +95,26 @@ header{
 }
 
 .itemContainer .checkBox:checked{
-    accent-color: green;
+    accent-color: #a6b1e1;
 }
 
-.itemContainer button{
+.editButton, .deleteButton{
     margin-left: .3em;
+    margin-right: .5em;
+    height: 30px;
+    width: 30px;
+}
+
+.editButton{
+    margin-left: 1em;
+    height: 30px;
 }
 
 .todoItemsDisplay{
-    min-height: 300px;
+    min-height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .todoItemsDisplay span, button{
@@ -105,12 +125,12 @@ header{
 
 .completedTask{
     text-decoration: line-through;
-    color: #a7a7a7;
+    color: #6e6e6e;
 }
 
 .paginationArea{
     display: flex;
-    justify-content: center;
+    justify-content: right;
 }
 
 .paginationArea .pageNumbers{
@@ -118,15 +138,44 @@ header{
     flex-wrap: wrap;
 }
 
-.paginationArea .pageNumbers button{
-    margin: 1px;
-    padding: 1px 5px;
+#nextBtn ,#previousBtn{
+    border: none;
 }
 
+.paginationArea .pageNumbers button, #nextBtn ,#previousBtn{
+    margin: .1em;
+    border-radius: 5px;
+    padding: 0;
+    font-size: .9em;
+    width: 50px;
+    height: 35px;
+}
+
+.paginationArea 
+.pageNumbers button, 
+#nextBtn ,#previousBtn,
+.editButton, .deleteButton,
+input[type = 'submit'],
+input[type = 'checkBox']:hover{
+    cursor: pointer;
+}
+
+.pageNumbers button{
+    border: none;
+}
 
 .activePage{
-    background-color:#0d54bd;
+    background-color:#a6b1e1;
     color: #fff;
+    border: none;
+}
+
+#previousBtn{
+    margin-right: .5em;
+}
+
+#nextBtn{
+    margin-left: .5em;
 }
 @media screen and (min-width:700px) {
     #submitBtn{
@@ -135,6 +184,15 @@ header{
     }
 }
 
+@media screen and (max-width:650px){
+    .itemContainer{
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto;
+        justify-content: space-between;
+        width: 100%;
+    }
+}
 
 @media screen and (max-width:600px) {
     .form{
@@ -158,7 +216,6 @@ header{
     .container{
         width: 90%;
     }
-
 
 }
 

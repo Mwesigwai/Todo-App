@@ -1,23 +1,26 @@
-import { updateTaskList } from "../form/onFormSubmit.js";
+import { updateTaskList } from "../commonFunctions/updateTaskList.js";
 import { getAllPaginationPageBtns } from "./getAllPaginationPageBtns.js";
+import { goToNextPage } from "./goToNextPage.js";
 import { goToPreviousPage } from "./goToPreviousPage.js";
 
 export function handlePageButtonClick(event) {
-    let pageNumber = event.target.textContent;
-    switch (pageNumber) {
-        case '<':
-            goToPreviousPage(event.target);
+    if (event.target != document.querySelector('body > main > nav') ) {
+        let pageNumber = event.target.textContent;
+        switch (pageNumber) {
+            case '<':
+                goToPreviousPage();
             break;
 
-        case '>':
-            goToNextPage(event.target);
+            case '>':
+                goToNextPage();
             break;
 
-        default:
-            let page = Number(pageNumber);
-            updateTaskList(page);
-            handleActivePageButton(event.target)
+            default:
+                let page = Number(pageNumber);
+                updateTaskList(page);
+                handleActivePageButton(event.target)
             break;
+        }
     }
 }
 

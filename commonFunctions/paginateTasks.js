@@ -1,5 +1,5 @@
 export function paginateTasks(tasks, page) {
-    const rowsPerPage = 5;
+    const rowsPerPage = 3;
     let start = (page - 1) * rowsPerPage;
     let end = start + rowsPerPage;
 
