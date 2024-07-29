@@ -1,0 +1,174 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Patrick Hand";
+    font-weight: 400;
+    font-style: normal;
+    /* outline: 2px solid red; */
+}
+
+
+.container{
+    width: 70%;
+    margin: auto;
+    text-align: center;
+}
+
+h1{
+    margin-bottom: 1em;
+}
+
+header{
+    font-weight: bold;
+    font-size: larger;
+}
+
+.form{
+    display: flex;
+    justify-content: space-between;
+}
+
+.form input{
+    font-size: 1.5em;
+    padding: .3em;
+    margin-top: .5em;
+    margin-bottom: .5em;
+}
+
+.form, .statistics{
+    margin: auto;
+    width: 100%;
+    font-size: 1em;
+    
+}
+
+#todoItem{
+    width: 70%;
+    margin-right: .5em;
+}
+
+#submitBtn{
+    background-color: #000;
+    color: #fff;
+    border: none;
+}
+
+.statistics{
+    /* outline: 4px solid green; */
+    display: flex;
+    justify-content:space-between;
+    font-size: large;
+    background-color: #000;
+    color: #fff;
+    padding: 1em;
+}
+
+.statistics .root{
+    margin: auto .5em;
+    font-size: 1.2em;
+}
+
+.itemContainer{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    margin: 1em 0;
+    text-align: left;
+    background-color: #fff;
+    padding: .2em;
+}
+
+.itemContainer .item, .checkBox{
+    width: 1.5em;
+    height: 1.5em;
+    margin-right: .3em;
+}
+
+.itemContainer .checkBox:checked{
+    accent-color: green;
+}
+
+.itemContainer button{
+    margin-left: .3em;
+}
+
+.todoItemsDisplay{
+    min-height: 300px;
+}
+
+.todoItemsDisplay span, button{
+    font-size: 1.5em;
+    margin-bottom: .2em;
+}
+
+
+.completedTask{
+    text-decoration: line-through;
+    color: #a7a7a7;
+}
+
+.paginationArea{
+    display: flex;
+    justify-content: center;
+}
+
+.paginationArea .pageNumbers{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.paginationArea .pageNumbers button{
+    margin: 1px;
+    padding: 1px 5px;
+}
+
+
+.activePage{
+    background-color:#0d54bd;
+    color: #fff;
+}
+@media screen and (min-width:700px) {
+    #submitBtn{
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+}
+
+
+@media screen and (max-width:600px) {
+    .form{
+        display: block;
+        width: 99%
+    }
+    #todoItem, #submitBtn{
+        width: 99%;
+    }
+
+    .statistics{
+        overflow: auto;
+        width: 98%;
+    }
+
+    .form input{
+        margin-top: .2em;
+        margin-bottom: .3em;
+    }
+
+    .container{
+        width: 90%;
+    }
+
+
+}
+
+@media screen and (min-width:1000px) {
+    #submitBtn{
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+
+    .container{
+        width: 70%;
+    }
+}

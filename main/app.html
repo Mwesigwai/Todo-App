@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="app.css">
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="container">
+        <h1>Simple Handmade TODO App With Vanilla Javascript</h1>
+    </header>
+
+    <main class="container">
+        <form action="" class="form">
+            <input type="text" name="todoItem" id="todoItem" required placeholder="enter a task">
+            <input type="submit" value="ADD NEW TASK" id="submitBtn">
+        </form>
+
+        <section class="statistics">
+            <span class="root">Total Tasks: <span class="totalTasks"></span></span>
+            <span class="root">Completed Tasks: <span class="completedTasks"></span></span>
+            <span class="root">Remaining Tasks: <span class="remainingTasks"></span></span>            
+        </section>
+
+        <section class="todoItemsDisplay">
+           
+        </section>
+
+        <nav class="paginationArea">
+            <button id="previousBtn">&lt;</button>
+                <div class="pageNumbers"></div>
+            <button id="nextBtn">&gt;</button>
+        </nav>
+    </main>
+
+    <script type="module" src="./app.js"></script>
+</body>
+</html>
