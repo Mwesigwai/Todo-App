@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task App</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <!-- <header>
+        <h1>Simple Handmade todo app with vanilla Javascript</h1>
+    </header> -->
+
+    <aside>
+        <div class="title">
+            <span>To-Do App</span>
+            <div class="userImage">
+                <img src="icons/checklist.svg" alt="user">
+            </div>
+        </div>
+        <div class="controls">
+            <button>New task</button>
+            <button class="activeControl">Task List</button>
+            <button>Orgarnize</button>
+            <button>Performance</button>
+        </div>
+    </aside>
+
+    <main>
+        <div class="controlHeading"><h1>Task List</h1></div>
+        <div class="mainContent">
+            <div class="taskListMainContent">
+                <div class="tabBar">
+                    <button class="tabBarButton activeTab" id="allTasks">all tasks: </button>
+                    <button class="tabBarButton" id="completedTasks">Completed: </button>
+                    <button class="tabBarButton" id="pendingTasks">Pending: </button>
+                </div>
+                <div class="taskTable"></div>
+            </div>
+        </div>
+    </main>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>
