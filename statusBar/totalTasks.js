@@ -1,12 +1,13 @@
 import { getTasks } from "../commonFunctions/getTasks.js";
 
 export function totalTasks() {
-    let total = getTotalTasks();
-    return total;
+    // let total = getTotalTasks();
+    // return total;
+    return getTotalTasks();
 }
 
 export function getTotalTasks() {
-    let total =  getTasks();
+    const total =  getTasks();
     return total.length;
 }
 

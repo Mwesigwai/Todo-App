@@ -113,9 +113,9 @@ header{
 
 .todoItemsDisplay{
     min-height: 200px;
-    display: flex;
+    /* display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: center; */
 }
 
 .todoItemsDisplay span, button{

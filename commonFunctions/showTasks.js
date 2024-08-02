@@ -7,7 +7,7 @@ export function showTasks(page){
     let tasks = getTasks().reverse();
     let paginatedTasks = paginateTasks(tasks, page);
 
-    if (paginatedTasks != []) {
+    if (paginatedTasks.length > 0) {
         for (const task of paginatedTasks) {
             loadTasks(task);
         }

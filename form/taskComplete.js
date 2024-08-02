@@ -1,7 +1,8 @@
 export function taskComplete(boolValue) {
-    if (boolValue === true) {
+    if (boolValue) {
         return 'completedTask';
     } else {
         return '';
     }
 }
+
